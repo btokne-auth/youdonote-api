@@ -20,7 +20,7 @@ switch ($method) {
     case 'POST':
         $data = json_decode(file_get_contents("php://input"), true);
         $stmt = $conn->prepare("INSERT INTO tasks (title, description, milestone_id, priority, category_tag, estimated_time, mental_effort, due_date, due_time) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
-        $stmt->bind_param("ssisssiss",
+        $stmt->bind_param("ssississ",
             $data['title'], $data['description'], $data['milestone_id'],
             $data['priority'], $data['category_tag'], $data['estimated_time'],
             $data['mental_effort'], $data['due_date'], $data['due_time']
@@ -33,7 +33,7 @@ switch ($method) {
         $data = json_decode(file_get_contents("php://input"), true);
         $id = intval($data['id']);
         $stmt = $conn->prepare("UPDATE tasks SET title=?, description=?, milestone_id=?, priority=?, category_tag=?, estimated_time=?, mental_effort=?, due_date=?, due_time=?, is_completed=? WHERE id=?");
-        $stmt->bind_param("ssisssissi",
+        $stmt->bind_param("ssississii",
             $data['title'], $data['description'], $data['milestone_id'],
             $data['priority'], $data['category_tag'], $data['estimated_time'],
             $data['mental_effort'], $data['due_date'], $data['due_time'],
