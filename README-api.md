@@ -2,7 +2,7 @@
 
 The cloud backend for **YouDoNote** — a PHP REST API + SOAP analytics service, sharing one MySQL database, deployed on [Railway](https://railway.com/).
 
-> Android client repo: [youdonote-android](#) _← update this link once the Android repo is created_
+> Android client repo: [youdonote-android](#) _← // to be updated once the Android repo is created_
 
 ---
 
