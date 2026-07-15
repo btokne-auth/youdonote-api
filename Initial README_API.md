@@ -64,8 +64,8 @@ User → YouDoNote App (Kotlin, Compose) ⇄ PHP Backend (Railway) ⇄ MySQL Dat
 |---|---|---|
 | `calculateTaskComplexity` | Returns Low/Medium/High complexity from priority, estimated time, mental effort | Workload Check (New Task screen) |
 | `getProductivityForecast` | Returns a productivity forecast from focus level + task load | Productivity Outlook (Focus Level widget) |
-| `generateSmartSummary` | Returns a generated summary from completed/pending task counts | Verified at backend only — not yet wired to UI |
-| `suggestOptimizedPriority` | Returns a suggested priority based on energy level and task load | Verified at backend only — not yet wired to UI |
+| `generateSmartSummary` | Returns a generated summary from completed/pending task counts | Verified at backend only |
+| `suggestOptimizedPriority` | Returns a suggested priority based on energy level and task load | Verified at backend only |
 
 All operations were verified via SoapUI and Postman with `200 OK` responses.
 
